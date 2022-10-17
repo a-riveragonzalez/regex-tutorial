@@ -2,13 +2,18 @@
 ---
 
 Regex, also known as regular expressions, define a **search pattern** by utilizing a series of characters. 
+
+
 When using Regex, you look at each character and translate what they mean. 
-For example : "Cat" is a captical "C" followed by a lowercase "a" and lowercase "t". In this case, each of these characters are **literal characters**. We can also use **meta characters**, which refers to a general pattern rather than a literal character. Using the above example of "Cat", we want a Uppercase alphabetical character followed by two lowercase alphabetical characters. 
+For example : "Cat" is a captical "C" followed by a lowercase "a" and lowercase "t". In this case, each of these characters are **literal characters**. We can also use **meta characters**, which refers to a general pattern rather than a literal character. Using the above example of "Cat", we want a uppercase alphabetical character followed by two lowercase alphabetical characters. 
+
+
+When included in code or search algorithms, regular expressions can be used to find certain patterns of characters within a string, or to find and replace a character or sequence of characters within a string. They are also frequently used to validate input. 
 
 ## Summary
 ---
 
-In this tutorial, we will use an example to match a hexcode. A hex code is a format to identify colors with a six custom characters. 
+In this tutorial, we will use an example to match a hexcode. A hex code is a format to identify colors with a six custom characters. The example regex we will use is: 
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
