@@ -60,14 +60,18 @@ In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
 ### Grouping and Capturing
 ---
+Grouping helps break the string into smaller sections to fulfill different requirements. "()" are used to create sections, also known as subexpressions. 
+
 
 In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
-- "(" ")" start and end of a group 
+- The "( )" are used to start and end of a group, or subexpression
 
 
 
 ### Bracket Expressions
 ---
+
+
 
 In our example :  `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 - "[ ]" everything in this is what we want to include in our regex
@@ -84,7 +88,7 @@ Here is a quick summary of what these characters represent :
 - "^" used to start the string
 - "#" Literal character, the hex code will start with this
 - "?" matches the pattern zero or one time
-- "( )" start and end of a group 
+- "( )" start and end of a group, or subexpression
 - "[ ]" start and end of a bracket expression
 - "a-f" any letter a-f
 - "0-9" any number 0-9
