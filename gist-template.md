@@ -1,4 +1,5 @@
 # Regex Tutorial for Matching a Hex Value
+---
 
 Introductory paragraph (replace this with your text)
 
@@ -11,6 +12,7 @@ For example : "Cat" is a captical "C" followed by a lowercase "a" and lowercase 
 
 Meta character refers to a general pattern rather than a literal character. Using the above example of "Cat", want a Uppercase character followed by two lowercase characters. 
 ## Summary
+---
 
 Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
 
@@ -32,6 +34,7 @@ Here is a quick summary of what these characters represent :
 
 
 ## Table of Contents
+---
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
@@ -46,53 +49,65 @@ Here is a quick summary of what these characters represent :
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+---
 ### Anchors
-- "^" start of a string
-- "$" end of a string
+---
+Anchors are used to signify the the start and end to a string. Both "^" and "$" are anchors. 
 
-`/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
-
+In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+- The "^" anchor is used to start the string
+- The "$" anchor is used to end the string
 
 ### Quantifiers
-- "{6}" "{3}" length of whatever number is inside the curly brackets
+---
+Quantifiers set the length of sections of the string. 
 
+In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+- The "?" matches the pattern zero or one time
+- The "{6}" and "{3}" signify that the length of that part of the string will be what is inside the curly brackets
 
 ### OR Operator
+---
+
+In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 - "|" or
 
 
+
 ### Character Classes
+---
 - .
 - \d
 - \w
 - \s 
 
+
 ### Flags
+---
 - g
 - i
 - m
 
+
 ### Grouping and Capturing
+---
+
+In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 - "(" ")" start and end of a group 
 
 
+
 ### Bracket Expressions
+---
+
+In our example :  `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 - "[ ]" everything in this is what we want to include in our regex
 - "a-f" any letter a-f
 - "0-9" any number 0-9
 
-### Greedy and Lazy Match
-
-
-### Boundaries
-
-
-### Back-references
-
-
-### Look-ahead and Look-behind
 
 ### Summary
+---
 
 Here is a quick summary of what these characters represent : 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
@@ -100,16 +115,19 @@ Here is a quick summary of what these characters represent :
 - "/" 
 - "^" start of a string
 - "#" Literal character, the hex code will start with this
-- "(" ")" start and end of a group 
-- "[" "]" start and end of a group ?
+- "?" matches the pattern zero or one time
+- "( )" start and end of a group 
+- "[ ]" start and end of a bracket expression
 - "a-f" any letter a-f
 - "0-9" any number 0-9
-- "{6}" "{3}" length of whatever number is inside the curly brackets
-- "|" or
+- "{ }" length of whatever number is inside the curly brackets
+- "|" or operator
 - "$" end of a string
 
 
+
 ## Author
+---
 
 💻 I am a junior full stack web developer based in Los Angeles. 
 
