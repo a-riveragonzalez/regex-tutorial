@@ -20,17 +20,6 @@ In this tutorial, we will use an example to match a hexcode. A hex code is a for
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-Here is a quick summary of what these characters represent : 
-- "/" 
-- "^" start of a string
-- "#" Literal character, the hex code will start with this
-- "(" ")" start and end of a group 
-- "[" "]" start and end of a group ?
-- "a-f" any letter a-f
-- "0-9" any number 0-9
-- "{6}" "{3}" length of whatever number is inside the curly brackets
-- "|" or
-- "$" end of a string
 
 
 ## Table of Contents
@@ -39,14 +28,10 @@ Here is a quick summary of what these characters represent :
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Summary](#summary)
+- [Author](#author)
 
 ## Regex Components
 ---
@@ -60,7 +45,7 @@ In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
 ### Quantifiers
 ---
-Quantifiers set the length of sections of the string. 
+Quantifiers set the length of sections of the string. They can set the minimum, maximum, and/or the exact amount of characters a string can have. 
 
 In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 - The "?" matches the pattern zero or one time
@@ -68,26 +53,10 @@ In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
 ### OR Operator
 ---
+The OR operator means that either expression on both sides of the "|" will be true. 
 
 In our example : `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
-- "|" or
-
-
-
-### Character Classes
----
-- .
-- \d
-- \w
-- \s 
-
-
-### Flags
----
-- g
-- i
-- m
-
+- The "|" means that the string can either be `[a-f0-9]{6}` or `[a-f0-9]{3}`
 
 ### Grouping and Capturing
 ---
@@ -112,17 +81,16 @@ In our example :  `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 Here is a quick summary of what these characters represent : 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-- "/" 
-- "^" start of a string
+- "^" used to start the string
 - "#" Literal character, the hex code will start with this
 - "?" matches the pattern zero or one time
 - "( )" start and end of a group 
 - "[ ]" start and end of a bracket expression
 - "a-f" any letter a-f
 - "0-9" any number 0-9
-- "{ }" length of whatever number is inside the curly brackets
+- "{ }" length of that part of the string will be what is inside the curly brackets
 - "|" or operator
-- "$" end of a string
+- "$" anchor is used to end the string
 
 
 
